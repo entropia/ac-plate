@@ -1,11 +1,34 @@
 // By GityUpNow(2017). Licensed under the MIT License
+// All units are in millimeters
 
-//All units are in millimeters
-// Plate
-TOLERANCE   =  2;
-PLATE_WIDTH = 42;
-PLATE_HEIGHT= 84;
+//Constants
+//Accuracy
+$fn = 30;
 
+//Plate
+TOLERANCE   =  20;
+PLATE_WIDTH = 420;
+PLATE_HEIGHT= 840;
+
+WIDTH  = PLATE_WIDTH  - TOLERANCE;
+HEIGHT = PLATE_HEIGHT - TOLERANCE;
+
+
+//Modules
 module base_plate() {
-    square([PLATE_WIDTH-TOLERANCE, PLATE_HEIGHT-TOLERANCE]);
+    square([WIDTH, HEIGHT]);
 }
+
+module plate(diameter) {
+    difference() {
+        base_plate();
+        translate([WIDTH/2, HEIGHT/4]) {
+            circle(d = diameter);
+        }
+    }
+}
+
+//Big air hose
+//plate(125);
+//Small air hose
+//plate(100);
