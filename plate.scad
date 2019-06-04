@@ -7,5 +7,5 @@ PLATE_WIDTH = 42;
 PLATE_HEIGHT= 84;
 
 module base_plate() {
-    square([PLATE_WIDTH, PLATE_HEIGHT]);
+    square([PLATE_WIDTH-TOLERANCE, PLATE_HEIGHT-TOLERANCE]);
 }
