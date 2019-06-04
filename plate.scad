@@ -1,6 +1,7 @@
 // By GityUpNow(2017). Licensed under the MIT License
 // All units are in millimeters
 
+
 //Constants
 //Accuracy
 $fn = 30;
@@ -28,6 +29,8 @@ module plate(diameter) {
     }
 }
 
+
+//Object
 //Big air hose
 //plate(125);
 //Small air hose
