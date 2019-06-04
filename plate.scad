@@ -31,7 +31,8 @@ module plate(diameter) {
 
 
 //Object
-//Big air hose
-//plate(125);
 //Small air hose
 //plate(100);
+
+//Big air hose
+//plate(125);
