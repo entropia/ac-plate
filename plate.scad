@@ -21,18 +21,14 @@ module base_plate() {
 }
 
 module plate(diameter) {
-    difference() {
-        base_plate();
-        translate([WIDTH/2, HEIGHT/4]) {
-            circle(d = diameter + 2);
+    rotate([0, 0, 90]) {
+        difference() {
+            base_plate();
+            translate([WIDTH/2, HEIGHT/4]) {
+                circle(d = diameter + 2);
+            }
         }
     }
 }
 
-
-//Object
-//Small air hose
-//plate(100);
-
-//Big air hose
-//plate(125);
+plate(DIAM);
