@@ -24,7 +24,7 @@ module plate(diameter) {
     difference() {
         base_plate();
         translate([WIDTH/2, HEIGHT/4]) {
-            circle(d = diameter);
+            circle(d = diameter + 2);
         }
     }
 }
