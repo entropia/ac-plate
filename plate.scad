@@ -10,6 +10,9 @@ $fn = 60;
 PLATE_WIDTH = 420;
 PLATE_HEIGHT= 840;
 
+//Hole
+TIGHT_FIT = 2;
+
 //Modules
 module base_plate() {
     square([PLATE_WIDTH, PLATE_HEIGHT]);
@@ -20,7 +23,7 @@ module plate(diameter) {
         difference() {
             base_plate();
             translate([PLATE_WIDTH/2, PLATE_HEIGHT/4]) {
-                circle(d = diameter);
+                circle(d = diameter - TIGHT_FIT);
             }
         }
     }
