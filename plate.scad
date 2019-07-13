@@ -7,8 +7,8 @@
 $fn = 60;
 
 //Plate
-PLATE_WIDTH = 420;
-PLATE_HEIGHT= 840;
+PLATE_WIDTH = 415;
+PLATE_HEIGHT= 845;
 
 //Hole
 TIGHT_FIT = 2;
