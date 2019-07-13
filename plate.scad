@@ -7,25 +7,20 @@
 $fn = 60;
 
 //Plate
-TOLERANCE   =  20;
 PLATE_WIDTH = 420;
 PLATE_HEIGHT= 840;
 
-WIDTH  = PLATE_WIDTH  - TOLERANCE;
-HEIGHT = PLATE_HEIGHT - TOLERANCE;
-
-
 //Modules
 module base_plate() {
-    square([WIDTH, HEIGHT]);
+    square([PLATE_WIDTH, PLATE_HEIGHT]);
 }
 
 module plate(diameter) {
     rotate([0, 0, 90]) {
         difference() {
             base_plate();
-            translate([WIDTH/2, HEIGHT/4]) {
-                circle(d = diameter + 2);
+            translate([PLATE_WIDTH/2, PLATE_HEIGHT/4]) {
+                circle(d = diameter);
             }
         }
     }
