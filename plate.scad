@@ -4,7 +4,7 @@
 
 //Constants
 //Accuracy
-$fn = 30;
+$fn = 60;
 
 //Plate
 TOLERANCE   =  20;
